@@ -3,22 +3,55 @@ import { motion } from 'framer-motion';
 import { HiMail, HiPhone, HiLocationMarker, HiCheckCircle } from 'react-icons/hi';
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 import Tilt from 'react-parallax-tilt';
+import emailjs from "emailjs-com";// ✅ NEW: Import emailjs
 import { contact, social } from '../config';
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setIsLoading(false);
-    }, 5000);
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  const form = e.currentTarget;
+
+  const formData = {
+    name: (form.elements.namedItem("full-name") as HTMLInputElement).value,
+    email: (form.elements.namedItem("email-address") as HTMLInputElement).value,
+    phone: (form.elements.namedItem("phone-number") as HTMLInputElement).value,
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
   };
 
+  // 📩 Admin Email
+  const adminEmail = emailjs.send(
+    "service_2axsufr",
+    "template_627ti04",
+    formData,
+    "2-QO9gc__0-vPMcvl"
+  );
+
+  // 📧 User Auto Reply
+  const userEmail = emailjs.send(
+    "service_2axsufr",
+    "template_b52vu0n",
+    formData,
+    "2-QO9gc__0-vPMcvl"
+  );
+
+  Promise.all([adminEmail, userEmail])
+    .then(() => {
+      setIsSubmitted(true);
+      form.reset();
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("Failed to send message ❌");
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+};
   return (
     <section id="contact" className="py-24 bg-white overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6">
