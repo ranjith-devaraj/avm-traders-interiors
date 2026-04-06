@@ -8,7 +8,7 @@ const categories = [
   'All',
   'Kitchen',
   'Living Room',
-  'Bedroom & Office',
+  // 'Bedroom & Office',
   'Pooja Room',
   'Furniture & Storage',
 ];
@@ -16,55 +16,35 @@ const categories = [
 // Generating project items with working image URLs
 const projectItems = [
   // Kitchen
-  { id: 1, category: 'Kitchen', title: 'Modern Green Kitchen', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600', color: 'green' },
-  { id: 2, category: 'Kitchen', title: 'Modular Kitchen Cabinets', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 3, category: 'Kitchen', title: 'Kitchen Storage Solution', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 4, category: 'Kitchen', title: 'Pull-out Baskets', img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 5, category: 'Kitchen', title: 'Green Loft Cabinets', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600', color: 'green' },
-  { id: 6, category: 'Kitchen', title: 'Pink & White Kitchen', img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600', color: 'pink' },
-  { id: 7, category: 'Kitchen', title: 'Red Glass Cabinets', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600', color: 'red' },
-  { id: 8, category: 'Kitchen', title: 'Orange Modular Kitchen', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=600', color: 'orange' },
-  { id: 9, category: 'Kitchen', title: 'Kitchen Drawer System', img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 10, category: 'Kitchen', title: 'Grey & White Kitchen', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600', color: 'grey' },
-  { id: 11, category: 'Kitchen', title: 'Modern Grey Cabinets', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=600', color: 'grey' },
-
+  { id: 1, category: 'Kitchen', title: 'Modern Green Kitchen', img: '/assets/kitchen/kitchen2.jpeg', color: 'green' },
+  { id: 2, category: 'Kitchen', title: 'Modular Kitchen Cabinets', img: '/assets/kitchen/kitchen3.jpeg', color: 'white' },
+  { id: 3, category: 'Kitchen', title: 'Kitchen Storage Solution', img: '/assets/kitchen/kitchen4.jpeg', color: 'wood' },
+  { id: 4, category: 'Kitchen', title: 'Pull-out Baskets', img: '/assets/kitchen/kitchen5.jpeg', color: 'white' },
+  { id: 5, category: 'Kitchen', title: 'Green Loft Cabinets', img: '/assets/kitchen/kitchen6.jpeg', color: 'green' },
   // Living Room
-  { id: 12, category: 'Living Room', title: 'Traditional TV Unit', img: 'https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 13, category: 'Living Room', title: 'Wooden Partition Wall', img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 14, category: 'Living Room', title: 'Modern TV Console', img: 'https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&q=80&w=600', color: 'white' },
-
-  // Bedroom & Office
-  { id: 15, category: 'Bedroom & Office', title: 'Master Bedroom Wardrobe', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 16, category: 'Bedroom & Office', title: 'Dark Wood Wardrobe', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 17, category: 'Bedroom & Office', title: 'Wardrobe with Mirror', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 18, category: 'Bedroom & Office', title: 'Bedroom Loft Storage', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 19, category: 'Bedroom & Office', title: 'Full Wall Wardrobe', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 20, category: 'Bedroom & Office', title: 'Light Wood Wardrobe', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 21, category: 'Bedroom & Office', title: 'Office Loft Cabinets', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 22, category: 'Bedroom & Office', title: 'Modern Wardrobe Design', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'grey' },
-  { id: 23, category: 'Bedroom & Office', title: 'Wardrobe with Open Shelves', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 24, category: 'Bedroom & Office', title: 'Yellow Loft Storage', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'yellow' },
-  { id: 25, category: 'Bedroom & Office', title: 'Kids Room Wardrobe', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 26, category: 'Bedroom & Office', title: 'Marble Finish Wardrobe', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'white' },
-
+  { id: 12, category: 'Living Room', title: 'Traditional TV Unit', img: '/assets/living-room/livingroom1.jpeg', color: 'wood' },
+  { id: 13, category: 'Living Room', title: 'Wooden Partition Wall', img: '/assets/living-room/livingroom2.jpeg', color: 'wood' },
+  { id: 14, category: 'Living Room', title: 'Modern TV Console', img: '/assets/living-room/livingroom3.jpeg', color: 'white' },
+  {id: 37, category: 'Living Room', title: 'Full Wall TV Unit', img: '/assets/living-room/livingroom4.jpeg', color: 'wood' },
+  {id: 36, category: 'Living Room', title: 'Wooden Storage Unit', img: '/assets/living-room/livingroom5.jpeg', color: 'wood' },
+  // // Bedroom & Office
+  // { id: 15, category: 'Bedroom & Office', title: 'Master Bedroom Wardrobe', img: '/assets/bedroom-office/bedroom1.jpeg', color: 'white' },
+  // { id: 16, category: 'Bedroom & Office', title: 'Dark Wood Wardrobe', img: '/assets/bedroom-office/bedroom2.jpeg', color: 'wood' },
+  // { id: 17, category: 'Bedroom & Office', title: 'Wardrobe with Mirror', img: '/assets/bedroom-office/bedroom3.jpg', color: 'white' },
+  // { id: 18, category: 'Bedroom & Office', title: 'Bedroom Loft Storage', img: '/assets/bedroom-office/bedroom4.jpg', color: 'white' },
+  // { id: 19, category: 'Bedroom & Office', title: 'Full Wall Wardrobe', img: '/assets/bedroom-office/bedroom5.jpg', color: 'wood' },
+  // { id: 20, category: 'Bedroom & Office', title: 'Light Wood Wardrobe', img: '/assets/bedroom-office/bedroom6.jpg', color: 'wood' },
   // Pooja Room
-  { id: 27, category: 'Pooja Room', title: 'Lotus Pattern Pooja Unit', img: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 28, category: 'Pooja Room', title: 'Ganesha Pattern Cabinet', img: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 29, category: 'Pooja Room', title: 'Traditional Prayer Unit', img: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&q=80&w=600', color: 'wood' },
+  { id: 27, category: 'Pooja Room', title: 'Lotus Pattern Pooja Unit', img: '/assets/pooja-room/poojARoom1.jpeg', color: 'wood' },
+  { id: 28, category: 'Pooja Room', title: 'Ganesha Pattern Cabinet', img: '/assets/pooja-room/poojARoom2.jpeg', color: 'wood' },
+  { id: 29, category: 'Pooja Room', title: 'Traditional Prayer Unit', img: '/assets/pooja-room/poojARoom3.jpeg', color: 'wood' },
 
   // Furniture & Storage
-  { id: 30, category: 'Furniture & Storage', title: 'Dark Wood Cabinet', img: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 31, category: 'Furniture & Storage', title: 'Multi-purpose Storage', img: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 32, category: 'Furniture & Storage', title: 'Custom Wall Unit', img: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=600', color: 'wood' },
-  { id: 33, category: 'Furniture & Storage', title: 'Storage Loft', img: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 34, category: 'Bedroom & Office', title: 'Upper Loft Cabinets', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 35, category: 'Bedroom & Office', title: 'Ceiling Storage', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 36, category: 'Kitchen', title: 'Green Kitchen Drawers', img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=600', color: 'green' },
-  { id: 37, category: 'Kitchen', title: 'Modular Kitchen Setup', img: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 38, category: 'Bedroom & Office', title: 'Compact Loft', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'white' },
-  { id: 39, category: 'Bedroom & Office', title: 'Yellow Storage Unit', img: 'https://images.unsplash.com/photo-1567538096630-e0843888e8de?auto=format&fit=crop&q=80&w=600', color: 'yellow' },
-  { id: 40, category: 'Kitchen', title: 'Orange Kitchen Sink Area', img: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600', color: 'orange' },
-  { id: 41, category: 'Bedroom & Office', title: 'Dark Wood Wardrobe Loft', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?auto=format&fit=crop&q=80&w=600', color: 'wood' },
+  { id: 30, category: 'Furniture & Storage', title: 'Dark Wood Cabinet', img: '/assets/furniture-storage/furniture1.jpeg', color: 'wood' },
+  { id: 31, category: 'Furniture & Storage', title: 'Multi-purpose Storage', img: '/assets/furniture-storage/furniture2.jpeg', color: 'white' },
+  { id: 32, category: 'Furniture & Storage', title: 'Custom Wall Unit', img: '/assets/furniture-storage/furniture3.jpeg', color: 'wood' },
+  { id: 33, category: 'Furniture & Storage', title: 'Storage Loft', img: '/assets/furniture-storage/furniture4.jpeg', color: 'white' },
+  { id: 34, category: 'Furniture & Storage', title: 'Upper Loft Cabinets', img: '/assets/furniture-storage/furniture5.jpeg', color: 'white' },,
 ];
 
 const colorFilters = [

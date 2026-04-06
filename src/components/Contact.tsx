@@ -25,21 +25,13 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
   // 📩 Admin Email
   const adminEmail = emailjs.send(
-    "service_2axsufr",
-    "template_627ti04",
+    "service_f8ttyvl",
+    "template_814s8yw",
     formData,
-    "2-QO9gc__0-vPMcvl"
+    "Uyh7yLm8uiSmc6AN4"
   );
 
-  // 📧 User Auto Reply
-  const userEmail = emailjs.send(
-    "service_2axsufr",
-    "template_b52vu0n",
-    formData,
-    "2-QO9gc__0-vPMcvl"
-  );
-
-  Promise.all([adminEmail, userEmail])
+  Promise.all([adminEmail])
     .then(() => {
       setIsSubmitted(true);
       form.reset();
