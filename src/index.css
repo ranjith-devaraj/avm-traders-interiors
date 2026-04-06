@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap ');
+@import "tailwindcss";
+@theme {
+    --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+    --color-primary: #c89b5e;
+    --color-beige: #f5f0e6;
+    --color-dark: #222222;
+    --color-accent: #e0b87e;
+    --radius-2xl: 20px;
+    --radius-3xl: 32px;
+    --radius-4xl: 48px;
+    --radius-5xl: 64px;
+    --shadow-premium: 0 20px 50px -12px rgba(200, 155, 94, 0.15);
+    --shadow-glow: 0 0 30px rgba(200, 155, 94, 0.2);
+    --animate-gradient: gradient 3s ease infinite;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+
+@layer base {
+    html {
+        /* smooth scroll handled by Lenis */
+    }
+
+    body {
+        @apply bg-beige text-dark font-sans antialiased;
+        overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-serif tracking-tight;
+    }
+}
+
+.glass-nav {
+    @apply bg-white/70 backdrop-blur-xl border-b border-primary/10;
+}
+
+.glass-card {
+    @apply bg-white/40 backdrop-blur-lg border border-white/40;
+    box-shadow: var(--shadow-premium);
+}
+
+.card-shadow {
+    box-shadow: var(--shadow-premium);
+}
+
+.text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-dark via-primary to-dark;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f5f0e6;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 155, 94, 0.3);
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+     background-color: rgba(200, 155, 94, 0.6);
+ }
+
+ /* Performance optimizations for parallax elements */
+ .parallax-slow, .parallax-medium, .parallax-fast {
+   will-change: transform;
+ }
