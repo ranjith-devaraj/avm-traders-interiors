@@ -25,10 +25,10 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
   // 📩 Admin Email
   const adminEmail = emailjs.send(
-    "service_f8ttyvl",
-    "template_814s8yw",
+    "service_9a95mgm",
+    "template_f1si7id",
     formData,
-    "Uyh7yLm8uiSmc6AN4"
+    "YzGSB06nrBzfVBwEz"
   );
 
   Promise.all([adminEmail])
